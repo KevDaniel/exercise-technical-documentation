@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header class="nav-link" id="nav-header-title">React JS Little Documentation</header> navlink
+        <a class="nav-link" href="#quick_start">Quick Start</a>
+        <a class="nav-link" href="#installation">Installation</a>
+        <a class="nav-link" href="#create_a_project">Start a New React Project</a>
+        <a class="nav-link" href="#using_typescript">Using TypeScript</a>
+        <a class="nav-link" href="#react_developer_tools">React Developer Tools</a>
+        <a class="nav-link" href="#your_first_component">Your First Component</a>
+    </nav>
+    <main id="main-doc">
+            <section class="main-section" id="quick_start_section">
+            <header id="quick_start" class="title_header">Quick start</header>
+            <p>Welcome to the React documentation! This page will give you an introduction to the 80% of React concepts that you will use on a daily basis.</p>
+            <p>You will learn</p>
+            <ul>
+                <li>How to create and nest components</li>
+                <li>How to add markup and styles</li>
+                <li>How to display data</li>
+                <li>How to render conditions and list</li>
+                <li>How to respond to events and update the screen</li>
+                <li>How to share data between components</li>
+            </ul>
+            <p class="title">Creating and nesting components</p>
+            <p>React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.</p>
+            <p>React components are JavaScript functions that return markup:</p>
+            <code><pre>
+                function MyButton() {
+                    return (
+                      &lt;button&gt;I'm a button&lt;/button&gt;
+                    );
+                  }
+            </pre></code>
+            <p>Now that you’ve declared MyButton, you can nest it into another component:</p>
+            <code><pre>
+                export default function MyApp() {
+                    return (
+                      &lt;div&gt;
+                      &lt;h1&gt;Welcome to my app&lt;/h1&gt;
+                      &lt;MyButton /&gt;
+                      &lt;/div&gt;
+                    );
+                  }
+            </pre></code>
+            <p>Notice that <code>&lt;MyButton&gt;</code> starts with a capital letter. That’s how you know it’s a React component. React component names must always start with a capital letter, while HTML tags must be lowercase.</p>
+            <p>Have a look at the result:</p>
+            <code><pre>
+                function MyButton() {
+                    return (
+                        &lt;button&gt;
+                        I'm a button
+                        &lt;/button&gt;
+                    );
+                  }
+                  
+                  export default function MyApp() {
+                    return (
+                        &lt;div&gt;
+                            &lt;h1&gt;Welcome to my app&lt;/h1&gt;
+                            &lt;MyButton /&gt;
+                        &lt;/div&gt;
+                    );
+                  }
+            </pre></code>
+            <p>The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.</p>
+            <p class="title">Adding styles</p>
+            <code>&lt;img className="avatar" /&gt;</code>
+            <p>Then you write the CSS rules for it in a separate CSS file: <code>.avatar{border-radius:50%;}</code></p>
+
+        </section>
+        <section class="main-section" id="installation_section">
+            <header id="installation" class="title_header">Installation</header>
+            <p>React has been designed from the start for gradual adoption. You can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to an HTML page, or start a complex React-powered app, this section will help you get started.</p>
+            <p>In this chapter</p>
+            <ul>
+                <li>How to start a new react project</li>
+                <li>how to add react to an existing project</li>
+                <li>How to set up your editor</li>
+                <li>How to install React Developer Tools</li>
+                <li>Important commands</li>
+            </ul>
+            <p class="title">Try React</p>
+            <p>You don’t need to install anything to play with React. Try editing this sandbox!</p>
+            <code><pre>
+                function Greeting({ name }) {
+                    return &lt;h1&gt;Hello, {name}&lt;/h1/gt;;
+                  }
+                  export default function App() {
+                    return &lt;Greeting name="world" /&gt;
+                  }
+            </pre></code>
+            <p>Most pages in the React documentation contain sandboxes like this. Outside of the React documentation, there are many online sandboxes that support React: for example, CodeSandbox, StackBlitz, or CodePen.</p>
+            <p class="title">Try React locally</p>
+            <p>To try React locally on your computer, download this HTML page. Open it in your editor and in your browser!</p>
+            <p class="title">Start a new React project</p>
+            <p>If you want to build an app or a website fully with React, start a new React project.</p>
+            <code>npx create-next-app@lastest</code>
+            <code>npx create-remix</code>
+            <code>npx create-gatsby</code>
+            <code>npx create-expo-app</code>
+            <p class="title">Add React to an existing project </p>
+            <p>If want to try using React in your existing app or a website, add React to an existing project.</p>
+        </section>
+        <section class="main-section" id="create_a_project_section">
+            <header id="create_a_project" class="title_header">Start a New React Project</header>
+            <p class="title">Start a New React Project</p>
+            <p>If you want to build a new app or a new website fully with React, we recommend picking one of the React-powered frameworks popular in the community.</p>
+            <p>You can use React without a framework, however we’ve found that most apps and sites eventually build solutions to common problems such as code-splitting, routing, data fetching, and generating HTML. These problems are common to all UI libraries, not just React.</p>
+            <p>By starting with a framework, you can get started with React quickly, and avoid essentially building your own framework later.</p>
+            <p class="title">Production-grade React frameworks</p>
+            <p>These frameworks support all the features you need to deploy and scale your app in production and are working towards supporting our full-stack architecture vision. All of the frameworks we recommend are open source with active communities for support, and can be deployed to your own server or a hosting provider. If you’re a framework author interested in being included on this list, please let us know.</p>
+            <p class="title">Next.js </p>
+            <p>Next.js’ Pages Router is a full-stack React framework. It’s versatile and lets you create React apps of any size—from a mostly static blog to a complex dynamic application. To create a new Next.js project, run in your terminal:</p>
+            <code>npx create-next-app@latest</code>
+            <p class="title">Remix</p>
+            <p>Remix is a full-stack React framework with nested routing. It lets you break your app into nested parts that can load data in parallel and refresh in response to the user actions. To create a new Remix project, run:</p>
+            <code>npx create-remix
+            </code>
+            <p>Other important commands are the following ones:</p>
+            <ul>
+                <li><code>npx create-gatsby</code></li>
+                <li><code>npx create-expo-app</code></li>
+                <li><code>npm start</code></li>
+                <li><code>npm run build</code></li>
+                <li><code>npm install axios</code></li>
+            </ul>
+        </section>
+        <section class="main-section" id="typescript_section">
+            <header id="using_typescript" class="title_header">Using TypeScript</header>
+            <p>TypeScript is a popular way to add type definitions to JavaScript codebases. Out of the box, TypeScript supports JSX and you can get full React Web support by adding @types/react and @types/react-dom to your project.</p>
+            <p>You will learn</p>
+            <ul>
+                <li>TypeScript with React Components</li>
+                <li>Examples of typing with Hooks</li>
+                <li>Common types from @types/react</li>
+                <li>Further learning locations</li>
+            </ul>
+            <p class="title">Installation</p>
+            <p>All production-grade React frameworks offer support for using TypeScript. Follow the framework specific guide for installation:</p>
+            <ol>
+                <li>Next.js</li>
+                <li>Remix</li>
+                <li>Gatsby</li>
+                <li>Expo</li>
+            </ol>   
+            <p class="title">Adding TypeScript to an existing React project</p>
+            <p>To install the latest version of React’s type definitions:</p>
+            <code><pre>
+                npm install @types/react @types/react-dom
+            </pre></code>
+            <p>The following compiler options need to be set in your tsconfig.json:</p>
+            <p>1. <code>dom</code>  must be included in <code>lib</code> (Note: If no <code>lib</code> option is specified, <code>dom</code> is included by default).</p>
+            <p>2. <code>jsx</code> must be set to one of the valid options. preserve should suffice for most applications. If you’re publishing a library, consult the <code>jsx</code> documentation on what value to choose.</p>
+            <p class="title">TypeScript with React Components</p>
+            <p>Writing TypeScript with React is very similar to writing JavaScript with React. The key difference when working with a component is that you can provide types for your component’s props. These types can be used for correctness checking and providing inline documentation in editors.</p>
+        </section>
+        <section class="main-section" id="developer_tools_section">
+            <header id="react_developer_tools" class="title_header">React Developer Tools</header>
+            <p>Use React Developer Tools to inspect React components, edit props and state, and identify performance problems.</p>
+            <p>You will learn:</p>
+            <ul>
+                <li>How to install React Developer Tools</li>
+                <li>Steps to follow to install</li>
+            </ul>
+            <p class="title">Browser Extension</p>
+            <p>The easiest way to debug websites built with React is to install the React Developer Tools browser extension. It is available for several popular browsers:</p>
+            <ul>
+                <li>Install for Chrome</li>
+                <li>Install for Firefox</li>
+                <li>Install for Edge</li>
+            </ul>
+            <p>Now, if you visit a website built with React, you will see the Components and Profiler panels.</p>
+            <p class="title">Safari and other browsers</p>
+            <p>For other browsers (for example, Safari), install the react-devtools npm package:</p>
+            <code><pre>
+                # Yarn
+                yarn global add react-devtools
+
+                # Npm
+                npm install -g react-devtools
+            </pre></code>
+            <p>Next open the developer tools from the terminal:</p>
+            <code><pre>
+                react-devtools
+            </pre></code>
+            <p>Then connect your website by adding the following <code>&lt;script&gt;</code> tag to the beginning of your website’s <code>&lt;head&gt;</code></p>
+            <code><pre>
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;script src="http://localhost:8097"&gt;&lt;/script&gt;
+            </pre></code>
+            <p>Reaload your website in the browser now to view it in developer tools</p>
+        </section>
+        <section class="main-section" id="first_component_section">
+            <header id="your_first_component" class="title_header">Your First Component</header>
+            <p>Components are one of the core concepts of React. They are the foundation upon which you build user interfaces (UI), which makes them the perfect place to start your React journey!</p>
+            <p>You will learn</p>
+            <ul>
+                <li>What a component is</li>
+                <li>What role components play in a React application</li>
+                <li>How to write your first React component</li>
+                <li>How you will see example code</li>
+                <li>Understanding how to see a component</li>
+            </ul>
+            <p class="title">Components: UI building blocks</p>
+            <p>On the Web, HTML lets us create rich structured documents with its built-in set of tags like <code>&lt;h1&gt;</code> and <code>&lt;li&gt;</code></p>
+            <code><pre>
+                &lt;article&gt;
+                    &lt;h1&gt;My First Component&lt;/h1&gt;
+                        &lt;ol&gt;
+                            &lt;li&gt;Components: UI Building Blocks&lt;/li&gt;
+                            &lt;li&gt;Defining a Component&lt;/li&gt;
+                            &lt;li&gt;Using a Component&lt;/li&gt;
+                        &lt;/ol&gt;
+                &lt;/article&gt;
+            </pre></code>
+            <p>This markup represents this article <code>&lt;article&gt;</code>, its heading <code>&lt;h1&gt;</code>, and an (abbreviated) table of contents as an ordered list <code>&lt;ol&gt;</code>. Markup like this, combined with CSS for style, and JavaScript for interactivity, lies behind every sidebar, avatar, modal, dropdown—every piece of UI you see on the Web.</p>
+            <p>React lets you combine your markup, CSS, and JavaScript into custom “components”, reusable UI elements for your app. The table of contents code you saw above could be turned into a ¨TableOfContents¨ component you could render on every page. Under the hood, it still uses the same HTML tags like "article"", "h1", etc.</p>
+            <p>Just like with HTML tags, you can compose, order and nest components to design whole pages. For example, the documentation page you’re reading is made out of React components:</p>
+            <code><pre>
+                &lt;PageLayout&gt;
+                    &lt;NavigationHeader&gt;
+                        &lt;SearchBar /&gt;
+                        &lt;Link to="/docs">Docs&lt;/Link&gt;
+                    &lt;/NavigationHeader&gt;
+                    &lt;Sidebar /&gt;
+                    &lt;PageContent&gt;
+                        &lt;TableOfContents /&gt;
+                        &lt;DocumentationText /&gt;
+                    &lt;/PageContent&gt;
+                &lt;/PageLayout&gt;
+            </pre></code>
+            <p>As your project grows, you will notice that many of your designs can be composed by reusing components you already wrote, speeding up your development. Our table of contents above could be added to any screen with "TableOfContents"! You can even jumpstart your project with the thousands of components shared by the React open source community like Chakra UI and Material UI.</p>
+            <p class="title">Defining a component</p>
+            <p>Traditionally when creating web pages, web developers marked up their content and then added interaction by sprinkling on some JavaScript. This worked great when interaction was a nice-to-have on the web. Now it is expected for many sites and all apps. React puts interactivity first while still using the same technology: a React component is a JavaScript function that you can sprinkle with markup.</p>       
+        </section>
+    </main>
+</body>
+</html>
